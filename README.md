@@ -1,18 +1,9 @@
-# plz-blog-configuration-iam
+# Shared WLZ IAM Configuration
 
 Terraform configuration for the blog IAM baseline, delegating most resources to the global IAM module.
 
-## Usage
-
-```hcl
-module "global_iam" {
-  source         = "./modules/iam"
-  aws_account_id = var.aws_account_id
-}
-```
-
 ## Notes
-- The AWS provider assumes `OrganizationAccountAccessRole` in `us-east-1`.
+- The AWS provider expects that the `OrganizationAccountAccessRole` is available to assume in the target account.
 - Set `aws_account_id` to the target account ID.
 
 <!-- BEGIN_TF_DOCS -->
