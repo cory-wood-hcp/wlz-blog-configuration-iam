@@ -19,5 +19,5 @@ variable "terraform_organization" {
 
 variable "avm_project_prefix" {
     type = string
-    default = "avm-"
+    default = "wlz-aws-"
 }
